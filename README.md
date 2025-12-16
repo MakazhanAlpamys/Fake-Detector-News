@@ -1,45 +1,45 @@
 # Fake News Detector
 
-Современное веб-приложение для обнаружения фейковых новостей с использованием искусственного интеллекта и технологий машинного обучения.
+A modern web application for detecting fake news using artificial intelligence and machine learning technologies.
 
-## 📋 Обзор проекта
+## 📋 Project Overview
 
-Приложение Fake News Detector позволяет пользователям проверять достоверность новостей с помощью продвинутых алгоритмов ИИ. Система анализирует текст новостей и выдает результат о их достоверности с определенным процентом уверенности.
+The Fake News Detector application allows users to verify the credibility of news using advanced AI algorithms. The system analyzes news text and provides results about their authenticity with a certain confidence percentage.
 
-## 🏗️ Архитектура проекта
+## 🏗️ Project Architecture
 
-Проект разделен на две основные части:
+The project is divided into two main parts:
 
-### Фронтенд (React)
+### Frontend (React)
 
-- Современный пользовательский интерфейс, созданный на React 19
-- Использование Tailwind CSS для стилизации
-- Анимации с использованием Framer Motion и Lottie
-- Многоязычная поддержка через LanguageContext
-- Темная/светлая тема через ThemeContext
-- Аутентификация пользователей через AuthContext
+- Modern user interface built with React 19
+- Styling using Tailwind CSS
+- Animations using Framer Motion and Lottie
+- Multi-language support via LanguageContext
+- Dark/light theme via ThemeContext
+- User authentication via AuthContext
 
-### Бэкенд (Node.js)
+### Backend (Node.js)
 
-- REST API на Express.js
-- Аутентификация с использованием JWT
-- PostgreSQL база данных
-- Интеграция с Hugging Face API для анализа новостей
-- Система ролей (пользователь/администратор)
+- REST API on Express.js
+- Authentication using JWT
+- PostgreSQL database
+- Integration with Hugging Face API for news analysis
+- Role system (user/administrator)
 
-## ✨ Основные функции
+## ✨ Main Features
 
-- **Проверка новостей**: Анализ заголовка и описания новости с помощью ИИ
-- **Аутентификация**: Регистрация, вход, выход, управление профилем
-- **История проверок**: Сохранение всех проверенных новостей
-- **Админ-панель**: Управление пользователями и просмотр статистики
-- **Мультиязычность**: Поддержка нескольких языков интерфейса
-- **Тёмная/светлая тема**: Выбор оформления приложения
-- **Адаптивный дизайн**: Корректное отображение на мобильных устройствах
+- **News Verification**: Analysis of news headline and description using AI
+- **Authentication**: Registration, login, logout, profile management
+- **Check History**: Saving all verified news
+- **Admin Panel**: User management and statistics viewing
+- **Multi-language**: Support for multiple interface languages
+- **Dark/Light Theme**: Application appearance selection
+- **Responsive Design**: Correct display on mobile devices
 
-## 🚀 Технологии
+## 🚀 Technologies
 
-### Фронтенд
+### Frontend
 - React 19
 - React Router 7
 - Axios
@@ -49,7 +49,7 @@
 - React Intersection Observer
 - AOS (Animate On Scroll)
 
-### Бэкенд
+### Backend
 - Node.js
 - Express 5
 - PostgreSQL
@@ -58,29 +58,29 @@
 - Axios
 - Hugging Face API
 
-## 🛠️ Установка и запуск
+## 🛠️ Installation and Setup
 
-### Предварительные требования
+### Prerequisites
 - Node.js (v14+)
 - PostgreSQL
-- API ключ Hugging Face (для анализа новостей)
+- Hugging Face API key (for news analysis)
 
-### Установка
+### Installation
 
-1. Клонировать репозиторий:
+1. Clone the repository:
    ```
    git clone https://github.com/your-username/fake-news-detector.git
    cd fake-news-detector
    ```
 
-2. Установить зависимости:
+2. Install dependencies:
    ```
    npm install
    cd frontend && npm install
    cd ../backend && npm install
    ```
 
-3. Создать файл `.env` в директории `backend`:
+3. Create `.env` file in the `backend` directory:
    ```
    DB_USER=postgres
    DB_PASSWORD=your_password
@@ -91,74 +91,74 @@
    HUGGINGFACE_API_KEY=your_huggingface_api_key
    ```
 
-4. Настроить базу данных:
+4. Set up the database:
    ```
    cd backend
    node setup-db.js
    ```
 
-### Запуск
+### Running
 
-1. Запустить бэкенд (из директории `backend`):
+1. Start the backend (from the `backend` directory):
    ```
    npm run dev
    ```
 
-2. Запустить фронтенд (из директории `frontend`):
+2. Start the frontend (from the `frontend` directory):
    ```
    npm start
    ```
 
-3. Открыть приложение в браузере:
+3. Open the application in your browser:
    ```
    http://localhost:3000
    ```
 
-## 📱 Скриншоты и демонстрация
+## 📱 Screenshots and Demo
 
-*[Здесь могут быть добавлены скриншоты приложения]*
+*[Screenshots of the application can be added here]*
 
-## 👥 Роли пользователей
+## 👥 User Roles
 
-### Обычный пользователь
-- Регистрация и вход в систему
-- Проверка новостей с помощью ИИ
-- Просмотр истории своих проверок
-- Обновление профиля
-- Отправка сообщений через контактную форму
+### Regular User
+- Registration and login to the system
+- News verification using AI
+- Viewing history of their checks
+- Profile updates
+- Sending messages through contact form
 
-### Администратор
-- Все возможности обычного пользователя
-- Просмотр списка всех пользователей
-- Просмотр всех проверок новостей
-- Доступ к статистике использования системы
-- Управление пользователями (изменение ролей)
+### Administrator
+- All regular user capabilities
+- Viewing list of all users
+- Viewing all news checks
+- Access to system usage statistics
+- User management (role changes)
 
-## 🧠 ИИ для анализа новостей
+## 🧠 AI for News Analysis
 
-В проекте используется модель Hugging Face для анализа текста новостей:
-- Модель: `facebook/bart-large-mnli`
-- Метод: Классификация текста по категориям "reliable news", "fake news", "misleading information"
-- Результат: Определение достоверности с процентом уверенности
+The project uses a Hugging Face model for news text analysis:
+- Model: `facebook/bart-large-mnli`
+- Method: Text classification by categories "reliable news", "fake news", "misleading information"
+- Result: Credibility determination with confidence percentage
 
-## 🗄️ Структура базы данных
+## 🗄️ Database Structure
 
-- **users**: Хранение информации о пользователях
-- **news_checks**: История проверок новостей
-- **contact_messages**: Сообщения от пользователей
+- **users**: Storage of user information
+- **news_checks**: News check history
+- **contact_messages**: Messages from users
 
-## 🔒 Безопасность
+## 🔒 Security
 
-- Хэширование паролей с помощью bcrypt
-- Проверка подлинности с помощью JWT
-- Защита маршрутов для администраторов
-- Валидация входных данных на фронтенде и бэкенде
+- Password hashing using bcrypt
+- Authentication verification using JWT
+- Protected routes for administrators
+- Input validation on frontend and backend
 
-## 📝 TODO и планы развития
+## 📝 TODO and Development Plans
 
-- Интеграция с другими API для кросс-проверки новостей
-- Возможность проверки новостей по URL
-- Мобильное приложение
-- Плагин для браузера
-- Расширенный анализ с объяснением причин классификации
-- Поддержка большего количества языков для анализа новостей 
+- Integration with other APIs for cross-checking news
+- Ability to check news by URL
+- Mobile application
+- Browser extension
+- Advanced analysis with explanation of classification reasons
+- Support for more languages for news analysis
